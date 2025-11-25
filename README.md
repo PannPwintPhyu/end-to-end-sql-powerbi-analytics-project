@@ -1,252 +1,181 @@
 # end-to-end-sql-powerbi-analytics-project
  ETL |  Medallion Architecture |  SQL Server |  Power BI |  DAX |  Data Modeling
 
-This project delivers a complete end-to-end data analytics solution, starting from raw CSV files and ending in a fully interactive Power BI dashboard.
-It demonstrates skills in data warehousing, analytics modeling, and BI visualization.
+---
 
-🗂️ 1. Architecture Overview
-🔷 Medallion Architecture (Bronze → Silver → Gold)
+# 🚀 **Welcome to End-to-End SQL + Power BI Analytics Project**
 
-This solution follows the modern Medallion Architecture to build a scalable data warehouse:
+This project demonstrates a full modern analytics solution starting from raw CSV files to a production-ready data warehouse and a fully interactive Power BI dashboard for **customer, product, RFM, and cohort analysis**.
 
-Bronze Layer — Raw Zone
+It showcases:
 
-Direct ingestion of CRM & ERP source files
+✔ Data engineering (ETL) using SQL Server
+✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)
+✔ Dimensional modeling (facts & dimensions)
+✔ Data quality corrections and business logic implementation
+✔ Advanced Power BI modeling and DAX
+✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis
 
-No business rules applied
+---
 
-Loaded using BULK INSERT
+# 🏗️ **Data Warehouse Architecture (Bronze → Silver → Gold)**
 
-Silver Layer — Cleaned Zone
+This project follows the **Medallion Architecture** to create a scalable, analytics-ready warehouse.
 
-Standardization & business logic applied
+---
 
-Data validation, deduplication, and type corrections
+## 🥉 **Bronze Layer — Raw Ingestion**
 
-Transformation of product lines, gender, marital status
+The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
-Fixing missing/invalid dates, recalculating sales fields
+### **Purpose**
 
-Gold Layer — Analytics Zone
+* Preserve raw data
+* Maintain source-of-truth
+* Act as input for all transformations
 
-Final analytical models prepared for reporting
+### **Key Actions**
 
-Dimensional modeling (facts + dimensions)
+* No transformations
+* No standardization
+* Bulk-loaded using `BULK INSERT`
 
-Creation of surrogate keys & time-based metrics
+---
 
-Pre-aggregation for customer & product reporting
+## 🥈 **Silver Layer — Clean / Standardized Zone**
 
-Business-ready attributes such as:
-✔ Recency
-✔ Customer lifespan
-✔ Average monthly spend
-✔ Product profitability metrics
-✔ RFM (Recency-Frequency-Monetary) scoring
-✔ Cohort tagging for retention analysis
+The Silver Layer applies data cleaning and business standardization:
 
-The Gold Layer provides a consistent, optimized semantic layer for BI tools.
+### **What Happens in Silver**
 
-🥉 2. Bronze Layer (Raw Ingestion)
+✔ Deduplication
+✔ Data type corrections
+✔ Date parsing
+✔ Product-line normalization
+✔ Customer gender/marital standardization
+✔ Missing value imputation
+✔ Sales recalculation rules
 
-The Bronze layer stores raw transactional and master data from CRM and ERP sources:
+The result: **clean, validated, business-ready staging tables**.
 
-No filtering
+---
 
-No data quality rules
+## 🥇 **Gold Layer — Analytics / Semantic Zone**
 
-Structure matches source fields
+The Gold Layer builds **analytical models** and prepares everything for BI.
 
-Loaded using automated SQL stored procedures
+### ⭐ **What Gold Layer Adds**
 
-This ensures full traceability and supports reproducible ETL.
+* Recency
+* Customer lifespan
+* Average monthly spend
+* Product profitability metrics
+* RFM scoring
+* Cohort month & lifecycle metrics
 
-🥈 3. Silver Layer (Cleansed / Standardized Zone)
+This layer delivers a **fully optimized star-schema** for Power BI consumption.
 
-The Silver layer applies business transformations such as:
+---
 
-Removing duplicate customer records
+# 📊 **Power BI Dashboards**
 
-Converting numeric dates to proper DATE format
+The final Power BI report contains **4 main analysis modules**:
 
-Normalizing categorical values (gender, marital status, product line)
+---
 
-Recalculating sales values when incorrect
+### **1️⃣ Overview Dashboard**
 
-Ensuring referential integrity
+Shows company-wide KPIs and customer-level trends:
 
-Aligning field naming & formats
+* Revenue
+* Profit
+* Orders
+* Customer count
+* AOV
+* Category/segment distributions
+* Monthly/Yearly performance trends
 
-Generating cleansing audit timestamps
+---
 
-By the end of the Silver stage, the dataset is clean, standardized, and business-ready.
+### **2️⃣ Product Performance Dashboard**
 
-🥇 4. Gold Layer (Analytics / Semantic Zone)
+Includes:
 
-The Gold Layer transforms cleaned data into analytics-ready models, enabling high-performance BI reporting.
+* Product lifecycle (Active / At-Risk / Dormant)
+* Price tier profit distribution
+* Category performance
+* High vs Low performer segmentation
+* Profit–Orders–Quantity scatter
+* Top & Bottom 5 products
 
-Key capabilities implemented:
+---
 
-✔ Dimensional Modeling (Star Schema)
+### **3️⃣ RFM Customer Segmentation Dashboard**
 
-Creation of customer, product, and date dimensions
+Behavior-based customer segmentation:
 
-Fact table for sales transactions
+* Recency scores
+* Frequency scores
+* Monetary scores
+* RFM segment distribution
+* RFM impact on revenue
+* Customer behavior clustering
 
-Conformed keys and optimized relationships
+---
 
-✔ Analytical Enhancements
+### **4️⃣ Cohort Analysis Dashboard**
 
-Customer behavioral attributes
+Customer retention analysis:
 
-Product lifecycle and performance tagging
+* First purchase cohort grouping
+* Month-over-month retention
+* Long-term customer activity decay
+* Cohort performance comparison
 
-Normalized financial measures
+---
 
-Time-aware metrics (recency, lifespan, cohorts)
+# ❓ **Business Questions Answered**
 
-✔ Pre-Aggregated Business Views
+### **🛒 Customer Behavior**
 
-Customer activity summary
+* Who are our most valuable customers?
+* Which customers are becoming inactive?
+* What are spending patterns across RFM groups?
 
-Product performance summary
+### **📦 Product Insights**
 
-Recency, frequency, monetary scores
+* Which products generate the most profit?
+* Which products are declining or dormant?
+* Which categories produce long-term value?
 
-Cohort retention view
+### **📈 Performance Trends**
 
-Price segmentation and profitability classes
+* How are revenue, profit, orders growing over time?
+* What seasons/days show highest activity?
 
-✔ Optimization for BI Consumption
+### **🔁 Retention**
 
-Column trimming
+* How long do customers stay active?
+* Which cohorts are strongest or weakest?
 
-Indexing
+---
 
-Business-friendly naming
+# 🚀 **Skills Demonstrated**
 
-View-based semantic layer for Power BI
+* **SQL Data Warehousing (Bronze/Silver/Gold)**
+* **Dimensional & Star Schema Modeling**
+* **ETL Development (Stored Procedures, Bulk Insert)**
+* **Business Logic Transformation**
+* **RFM & Cohort Analysis (DAX)**
+* **Power BI Modeling & Storytelling**
+* **Performance Optimization (Indexing & Views)**
 
-The Gold Layer is the foundation for all reporting and analytics.
+This project is designed as a **professional BI/Analytics portfolio** showcasing real-world analytical engineering capabilities.
 
-📊 5. Power BI Dashboards
+---
 
-The final dashboard includes 4 major analytical modules, each built with advanced DAX and structured storytelling.
 
-1️⃣ Performance Overview Dashboard
 
-Revenue, Profit, Orders, Customer KPIs
 
-Trend analysis
 
-Category performance
 
-Customer distribution
-
-Dynamic YoY calculations
-
-Interactive date filtering
-
-2️⃣ Product Analytics Dashboard
-
-Product lifecycle (Active / At-Risk / Dormant)
-
-Price tier profitability
-
-Category-level performance
-
-High vs Low performer analysis
-
-Profit vs Orders scatter (Quantity as bubble size)
-
-Top & bottom product comparison
-
-3️⃣ RFM Customer Segmentation Dashboard
-
-Behavioral segmentation using Recency, Frequency & Monetary
-
-Segment distribution (Champions, Loyal, At-Risk, Hibernating…)
-
-R/F/M score heatmaps
-
-Customer value comparison
-
-Bubble relationship analysis
-
-4️⃣ Cohort Retention Dashboard
-
-First purchase month grouping
-
-Month-over-month retention behavior
-
-Lifecycle decay patterns
-
-Comparison across cohorts
-
-Insights into acquisition quality and retention strategy
-
-🧠 6. Key Insights Generated
-Customer Insights
-
-VIP & Loyal customers contribute the majority of revenue
-
-Large share of At-Risk customers → retention opportunity
-
-High R-Score customers show strong recent engagement
-
-Product Insights
-
-Exclusive tier products generate the highest profit
-
-Clear 80/20 rule: minority of SKUs produce majority of value
-
-Dormant products require marketing or pricing intervention
-
-Cohort Insights
-
-Strongest retention occurs in first ~3 months
-
-Long-term retention stabilizes between 3–5%
-
-Acquisition quality differs by period
-
-🧩 7. Skills Demonstrated
-🔧 Data Engineering
-
-Advanced SQL ETL
-
-Stored procedures
-
-Bulk loading
-
-Data quality validation
-
-Transformation logic
-
-Indexing and optimization
-
-📦 Data Warehousing
-
-Medallion architecture
-
-Dimensional modeling (Star Schema)
-
-Fact & dimension design
-
-Surrogate keys
-
-Analytical feature engineering
-
-📊 Business Intelligence
-
-DAX measures & modeling
-
-KPI design
-
-RFM segmentation
-
-Cohort retention modeling
-
-Data storytelling
-
-Interactive dashboards
