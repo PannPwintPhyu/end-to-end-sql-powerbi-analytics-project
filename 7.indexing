@@ -1,0 +1,48 @@
+/* ================================================================
+   Indexes for gold.fact_sales
+================================================================ */
+
+CREATE CLUSTERED INDEX IX_fact_sales_order_date
+ON gold.fact_sales (order_date);
+
+CREATE NONCLUSTERED INDEX IX_fact_sales_customer_key
+ON gold.fact_sales (customer_key);
+
+CREATE NONCLUSTERED INDEX IX_fact_sales_product_key
+ON gold.fact_sales (product_key);
+
+CREATE NONCLUSTERED INDEX IX_fact_sales_product_date
+ON gold.fact_sales (product_key, order_date);
+
+CREATE NONCLUSTERED INDEX IX_fact_sales_customer_date
+ON gold.fact_sales (customer_key, order_date);
+
+
+
+/* ================================================================
+   Indexes for gold.customers
+================================================================ */
+
+CREATE CLUSTERED INDEX IX_customers_customer_key
+ON gold.customers (customer_key);
+
+CREATE NONCLUSTERED INDEX IX_customers_segment
+ON gold.customers (customer_segment);
+
+CREATE NONCLUSTERED INDEX IX_customers_age_group
+ON gold.customers (age_group);
+
+
+
+/* ================================================================
+   Indexes for gold.products
+================================================================ */
+
+CREATE CLUSTERED INDEX IX_products_product_key
+ON gold.products (product_key);
+
+CREATE NONCLUSTERED INDEX IX_products_category
+ON gold.products (category);
+
+CREATE NONCLUSTERED INDEX IX_products_segment
+ON gold.products (product_segment);
