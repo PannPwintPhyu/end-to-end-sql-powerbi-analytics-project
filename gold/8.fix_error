@@ -1,0 +1,17 @@
+UPDATE s
+SET s.sls_order_dt = v.valid_order_date
+FROM silver.crm_sales_details s
+CROSS APPLY (
+    SELECT MIN(s2.sls_order_dt) AS valid_order_date
+    FROM silver.crm_sales_details s2
+    WHERE s2.sls_ord_num = s.sls_ord_num
+      AND s2.sls_order_dt IS NOT NULL
+) v
+WHERE s.sls_order_dt IS NULL;
+
+
+-------------------------------------
+
+UPDATE silver.crm_sales_details
+SET sls_order_dt = sls_ship_dt
+WHERE sls_order_dt IS NULL;
