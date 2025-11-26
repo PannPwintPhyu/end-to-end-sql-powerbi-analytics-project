@@ -262,7 +262,7 @@ Offer product bundles, personalized recommendations, and frequency-based discoun
 
 ### 🔹 **7. Monitor Long-Term Retention Trends**
 
-Cohort patterns show acquisition quality shifts over time.
+Cohort patterns show acquisition quality shifts over time.                                                                        
 **Recommendation:**
 Use Cohort page regularly to evaluate marketing effectiveness and customer loyalty patterns.
 
