@@ -209,7 +209,6 @@ This project is designed as a professional **BI/Analytics portfolio** showcasing
 ### 🔹 **1. Strengthen Early Customer Engagement**
 
 Cohort retention drops sharply after Month 2–3.
-
 **Recommendation:**
 Introduce onboarding campaigns, reminder notifications, and early-purchase incentives to improve early lifecycle retention.
 
@@ -218,7 +217,6 @@ Introduce onboarding campaigns, reminder notifications, and early-purchase incen
 ### 🔹 **2. Prioritize High-Value Customer Segments (Champions & Loyal)**
 
 RFM analysis shows these customers generate the majority of revenue.                                            
-
 **Recommendation:**
 Create premium loyalty benefits, targeted promotions, and exclusive offers to maintain long-term value.
 
@@ -227,7 +225,6 @@ Create premium loyalty benefits, targeted promotions, and exclusive offers to ma
 ### 🔹 **3. Reactivate At-Risk & Hibernating Customers**
 
 These groups represent lost revenue opportunities.
-
 **Recommendation:**
 Launch reactivation campaigns—discount reminders, personalized product recommendations, and seasonal offers.
 
@@ -236,7 +233,6 @@ Launch reactivation campaigns—discount reminders, personalized product recomme
 ### 🔹 **4. Optimize Product Portfolio**
 
 Top performer products generate dominant profit while dormant products show declining trends.
-
 **Recommendation:**
 Increase stock & marketing for high performers; reprice, bundle, or retire underperforming SKUs.
 
@@ -245,7 +241,6 @@ Increase stock & marketing for high performers; reprice, bundle, or retire under
 ### 🔹 **5. Leverage High-Profit Price Segments**
 
 Exclusive/Signature tiers produce the highest profit contribution.
-
 **Recommendation:**
 Focus upselling strategies to move mid-tier customers into premium product lines.
 
@@ -254,7 +249,6 @@ Focus upselling strategies to move mid-tier customers into premium product lines
 ### 🔹 **6. Expand Customer Value Through Upsell/Cross-Sell**
 
 Large number of customers fall under low Monetary score groups.
-
 **Recommendation:**
 Offer product bundles, personalized recommendations, and frequency-based discounts.
 
