@@ -21,12 +21,12 @@ This project demonstrates a full modern analytics solution starting from raw CSV
 
 It showcases:
 
-✔ Data engineering (ETL) using SQL Server
-✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)
-✔ Dimensional modeling (facts & dimensions)
-✔ Data quality corrections and business logic implementation
-✔ Advanced Power BI modeling and DAX
-✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis
+✔ Data engineering (ETL) using SQL Server                                                                                                  
+✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)                                                                      
+✔ Dimensional modeling (facts & dimensions)                                                                  
+✔ Data quality corrections and business logic implementation                                                                                    
+✔ Advanced Power BI modeling and DAX                                                                                    
+✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis                                                                
 
 ---
 
@@ -60,13 +60,13 @@ The Silver Layer applies business cleaning and data standardization:
 
 ### **What Happens in Silver**
 
-✔ Deduplication
-✔ Data type corrections
-✔ Date parsing
-✔ Product-line normalization
-✔ Customer gender/marital standardization
-✔ Missing value imputation
-✔ Sales recalculation rules
+✔ Deduplication                                                                                        
+✔ Data type corrections                                                                                                                                                      
+✔ Date parsing                                                                                                          
+✔ Product-line normalization                                                                                                
+✔ Customer gender/marital standardization                                                                                
+✔ Missing value imputation                                                                                      
+✔ Sales recalculation rules                                                                          
 
 The result: **clean, validated, business-ready staging tables**.
 
