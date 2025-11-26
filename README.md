@@ -1,7 +1,48 @@
-# end-to-end-sql-powerbi-analytics-project
- ETL |  Medallion Architecture |  SQL Server |  Power BI |  DAX |  Data Modeling
+# 🚀 **End-to-End SQL + Power BI Analytics Project**
+
+**ETL | Medallion Architecture | SQL Server | Power BI | DAX**
 
 ---
+
+# 🔗 **Live Power BI Dashboard**
+
+👉 **Click to View Interactive Report**
+**[https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D](https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D)**
+
+---
+
+# 🖼️ **Dashboard Preview (6 Screenshots)**
+
+<table>
+<tr>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/1.png" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/2.png" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/3.png" width="300"></td>
+</tr>
+
+<tr>
+<td align="center"><b>Overview Dashboard</b></td>
+<td align="center"><b>Product Analysis</b></td>
+<td align="center"><b>RFM Analysis</b></td>
+</tr>
+
+<tr>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/4.png" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/5.png" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/6.png" width="300"></td>
+</tr>
+
+<tr>
+<td align="center"><b>Cohort Analysis</b></td>
+<td align="center"><b>Product Drilldown</b></td>
+<td align="center"><b>Customer Records</b></td>
+</tr>
+</table>
+
+---
+
+# 📘 **Project Overview**
+
 This project demonstrates a full modern analytics solution starting from raw CSV files to a production-ready data warehouse and a fully interactive Power BI dashboard for **customer, product, RFM, and cohort analysis**.
 
 It showcases:
@@ -17,7 +58,7 @@ It showcases:
 
 # 🏗️ **Data Warehouse Architecture (Bronze → Silver → Gold)**
 
-This project follows the **Medallion Architecture** to create a scalable, analytics-ready warehouse.
+This project follows the modern **Medallion Architecture** to create a scalable, analytics-ready warehouse.
 
 ---
 
@@ -35,13 +76,13 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 * No transformations
 * No standardization
-* Bulk-loaded using `BULK INSERT`
+* Loaded using `BULK INSERT`
 
 ---
 
 ## 🥈 **Silver Layer — Clean / Standardized Zone**
 
-The Silver Layer applies data cleaning and business standardization:
+The Silver Layer applies business cleaning and data standardization:
 
 ### **What Happens in Silver**
 
@@ -59,7 +100,7 @@ The result: **clean, validated, business-ready staging tables**.
 
 ## 🥇 **Gold Layer — Analytics / Semantic Zone**
 
-The Gold Layer builds **analytical models** and prepares everything for BI.
+The Gold Layer builds **analytics-ready dimensional models** for BI consumption.
 
 ### ⭐ **What Gold Layer Adds**
 
@@ -70,19 +111,17 @@ The Gold Layer builds **analytical models** and prepares everything for BI.
 * RFM scoring
 * Cohort month & lifecycle metrics
 
-This layer delivers a **fully optimized star-schema** for Power BI consumption.
+This layer delivers a **fully optimized star schema** for Power BI.
 
 ---
 
 # 📊 **Power BI Dashboards**
 
-The final Power BI report contains **4 main analysis modules**:
+The final Power BI report contains **4 major analytical modules**:
 
 ---
 
 ### **1️⃣ Overview Dashboard**
-
-Shows company-wide KPIs and customer-level trends:
 
 * Revenue
 * Profit
@@ -96,8 +135,6 @@ Shows company-wide KPIs and customer-level trends:
 
 ### **2️⃣ Product Performance Dashboard**
 
-Includes:
-
 * Product lifecycle (Active / At-Risk / Dormant)
 * Price tier profit distribution
 * Category performance
@@ -108,8 +145,6 @@ Includes:
 ---
 
 ### **3️⃣ RFM Customer Segmentation Dashboard**
-
-Behavior-based customer segmentation:
 
 * Recency scores
 * Frequency scores
@@ -122,35 +157,33 @@ Behavior-based customer segmentation:
 
 ### **4️⃣ Cohort Analysis Dashboard**
 
-Customer retention analysis:
-
 * First purchase cohort grouping
 * Month-over-month retention
-* Long-term customer activity decay
+* Long-term activity patterns
 * Cohort performance comparison
 
 ---
 
 # ❓ **Business Questions Answered**
 
-### **🛒 Customer Behavior**
+### 🛒 **Customer Behavior**
 
 * Who are our most valuable customers?
 * Which customers are becoming inactive?
 * What are spending patterns across RFM groups?
 
-### **📦 Product Insights**
+### 📦 **Product Insights**
 
 * Which products generate the most profit?
 * Which products are declining or dormant?
-* Which categories produce long-term value?
+* Which categories deliver long-term value?
 
-### **📈 Performance Trends**
+### 📈 **Performance Trends**
 
 * How are revenue, profit, orders growing over time?
 * What seasons/days show highest activity?
 
-### **🔁 Retention**
+### 🔁 **Retention**
 
 * How long do customers stay active?
 * Which cohorts are strongest or weakest?
@@ -167,12 +200,7 @@ Customer retention analysis:
 * **Power BI Modeling & Storytelling**
 * **Performance Optimization (Indexing & Views)**
 
-This project is designed as a **professional BI/Analytics portfolio** showcasing real-world analytical engineering capabilities.
+This project is designed as a professional **BI/Analytics portfolio** showcasing real-world analytical engineering capabilities.
 
 ---
-
-
-
-
-
 
