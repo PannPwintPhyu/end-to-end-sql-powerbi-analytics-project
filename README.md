@@ -10,34 +10,8 @@
 **[https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D](https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D)**
 
 ---
-
-# 🖼️ **Dashboard Preview (6 Screenshots)**
-
-<table>
-<tr>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/1.png" width="300"></td>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/2.png" width="300"></td>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/3.png" width="300"></td>
-</tr>
-
-<tr>
-<td align="center"><b>Overview Dashboard</b></td>
-<td align="center"><b>Product Analysis</b></td>
-<td align="center"><b>RFM Analysis</b></td>
-</tr>
-
-<tr>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/4.png" width="300"></td>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/5.png" width="300"></td>
-<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/6.png" width="300"></td>
-</tr>
-
-<tr>
-<td align="center"><b>Cohort Analysis</b></td>
-<td align="center"><b>Product Drilldown</b></td>
-<td align="center"><b>Customer Records</b></td>
-</tr>
-</table>
+🖼️ Dashboard Preview (6 Screenshots)
+<table> <tr> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/1_Overview.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/2_ProductAnalysis.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/3_ProductDetails.png?raw=true" width="300"></td> </tr> <tr> <td align="center"><b>Overview Dashboard</b></td> <td align="center"><b>Product Analysis</b></td> <td align="center"><b>Product Details</b></td> </tr> <tr> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/4_RFMAnalysis.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/5_CustomerRecords.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/6_Cohort.png?raw=true" width="300"></td> </tr> <tr> <td align="center"><b>RFM Analysis</b></td> <td align="center"><b>Customer Records</b></td> <td align="center"><b>Cohort Analysis</b></td> </tr> </table>
 
 ---
 
