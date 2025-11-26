@@ -1,0 +1,194 @@
+/*
+===============================================================================
+Stored Procedure: Load Gold Layer (View -> Table)
+===============================================================================
+Script Purpose:
+    This stored procedure loads the analytic-ready GOLD layer by truncating
+    GOLD reporting tables and inserting data from the GOLD reporting views.
+
+    Actions Performed:
+        - Truncates GOLD tables.
+        - Inserts aggregated data from GOLD views:
+            • gold.report_customers  -> gold.customers
+            • gold.report_products   -> gold.products
+            • gold.factsales         -> gold.fact_sales
+
+Parameters:
+    None.
+
+Usage Example:
+    EXEC gold.load_gold;
+===============================================================================
+*/
+
+CREATE OR ALTER PROCEDURE gold.load_gold AS
+BEGIN
+    DECLARE 
+        @start_time DATETIME,
+        @end_time DATETIME,
+        @batch_start_time DATETIME,
+        @batch_end_time DATETIME;
+
+    BEGIN TRY
+        
+        SET @batch_start_time = GETDATE();
+        PRINT '================================================';
+        PRINT '           START LOADING GOLD LAYER             ';
+        PRINT '================================================';
+
+        ------------------------------------------------------------
+        -- Load gold.customers
+        ------------------------------------------------------------
+        PRINT '>> Loading gold.customers';
+        SET @start_time = GETDATE();
+
+        TRUNCATE TABLE gold.customers;
+
+        INSERT INTO gold.customers (
+            customer_key,
+            customer_number,
+            customer_name,
+            age,
+            age_group,
+            customer_segment,
+            last_order_date,
+            recency,
+            total_orders,
+            total_sales,
+            total_quantity,
+            total_products,
+            lifespan,
+            avg_order_value,
+            avg_monthly_spend
+        )
+        SELECT
+            customer_key,
+            customer_number,
+            customer_name,
+            age,
+            age_group,
+            customer_segment,
+            last_order_date,
+            recency,
+            total_orders,
+            total_sales,
+            total_quantity,
+            total_products,
+            lifespan,
+            avg_order_value,
+            avg_monthly_spend
+        FROM gold.report_customers;
+
+        SET @end_time = GETDATE();
+        PRINT '   - Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' sec';
+        PRINT '------------------------------------------------';
+
+
+        ------------------------------------------------------------
+        -- Load gold.products
+        ------------------------------------------------------------
+        PRINT '>> Loading gold.products';
+        SET @start_time = GETDATE();
+
+        TRUNCATE TABLE gold.products;
+
+        INSERT INTO gold.products (
+            product_key,
+            product_name,
+            category,
+            subcategory,
+            cost,
+            last_sale_date,
+            recency_in_months,
+            product_segment,
+            lifespan,
+            total_orders,
+            total_sales,
+            total_quantity,
+            total_customers,
+            avg_selling_price,
+            avg_order_revenue,
+            avg_monthly_revenue
+        )
+        SELECT
+            product_key,
+            product_name,
+            category,
+            subcategory,
+            cost,
+            last_sale_date,
+            recency_in_months,
+            product_segment,
+            lifespan,
+            total_orders,
+            total_sales,
+            total_quantity,
+            total_customers,
+            avg_selling_price,
+            avg_order_revenue,
+            avg_monthly_revenue
+        FROM gold.report_products;
+
+        SET @end_time = GETDATE();
+        PRINT '   - Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' sec';
+        PRINT '------------------------------------------------';
+
+
+        ------------------------------------------------------------
+        -- Load gold.fact_sales
+        ------------------------------------------------------------
+        PRINT '>> Loading gold.fact_sales';
+        SET @start_time = GETDATE();
+
+        TRUNCATE TABLE gold.fact_sales;
+
+        INSERT INTO gold.fact_sales (
+            order_number,
+            product_key,
+            customer_key,
+            order_date,
+            ship_date,
+            due_date,
+            sales_amount,
+            quantity,
+            price
+        )
+        SELECT
+            order_number,
+            product_key,
+            customer_key,
+            order_date,
+            shipping_date,
+            due_date,
+            sales_amount,
+            quantity,
+            price
+        FROM gold.factsales;
+
+        SET @end_time = GETDATE();
+        PRINT '   - Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' sec';
+        PRINT '------------------------------------------------';
+
+
+        ------------------------------------------------------------
+        -- Completed
+        ------------------------------------------------------------
+        SET @batch_end_time = GETDATE();
+        PRINT '================================================';
+        PRINT '        GOLD LAYER LOAD COMPLETED SUCCESSFULLY  ';
+        PRINT '   - Total Duration: ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' sec';
+        PRINT '================================================';
+
+    END TRY
+
+    BEGIN CATCH
+        PRINT '================================================';
+        PRINT '   ERROR OCCURRED WHILE LOADING GOLD LAYER';
+        PRINT '   Message: ' + ERROR_MESSAGE();
+        PRINT '   Number:  ' + CAST(ERROR_NUMBER() AS NVARCHAR);
+        PRINT '   State:   ' + CAST(ERROR_STATE() AS NVARCHAR);
+        PRINT '================================================';
+    END CATCH
+
+END;
+GO
