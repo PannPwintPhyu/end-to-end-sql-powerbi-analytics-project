@@ -1,0 +1,94 @@
+/*
+===============================================================================
+DDL Script: Create GOLD Report Tables
+===============================================================================
+Script Purpose:
+    This script creates the GOLD-layer reporting tables used for analytics 
+    dashboards, customer insights, RFM, ABC, product metrics, and trend analysis.
+
+    Run this script to define the DDL structure for:
+       - gold.customers
+       - gold.products
+       - gold.fact_sales      
+===============================================================================
+*/
+
+--------------------------------------------------------------------------------
+-- Create Table: gold.customers
+--------------------------------------------------------------------------------
+IF OBJECT_ID('gold.customers', 'U') IS NOT NULL
+    DROP TABLE gold.customers;
+GO
+
+CREATE TABLE gold.customers (
+    customer_key        INT,
+    customer_number     NVARCHAR(50),
+    customer_name       NVARCHAR(150),
+    age                 INT,
+    age_group           NVARCHAR(50),
+    customer_segment    NVARCHAR(50),
+    last_order_date     DATE,
+    recency             INT,             -- months since last order
+    total_orders        INT,
+    total_sales         DECIMAL(18,2),
+    total_quantity      INT,
+    total_products      INT,
+    lifespan            INT,             -- months active
+    avg_order_value     DECIMAL(18,2),
+    avg_monthly_spend   DECIMAL(18,2)
+);
+GO
+
+
+--------------------------------------------------------------------------------
+-- Create Table: gold.products
+--------------------------------------------------------------------------------
+IF OBJECT_ID('gold.products', 'U') IS NOT NULL
+    DROP TABLE gold.products;
+GO
+
+CREATE TABLE gold.products (
+    product_key         INT,
+    product_name        NVARCHAR(150),
+    category            NVARCHAR(100),
+    subcategory         NVARCHAR(100),
+    cost                DECIMAL(18,2),
+    last_sale_date      DATE,
+    recency_in_months   INT,
+    product_segment     NVARCHAR(50),     -- High-Performer, Mid-Range, Low-Performer
+    lifespan            INT,              -- months active
+    total_orders        INT,
+    total_sales         DECIMAL(18,2),
+    total_quantity      INT,
+    total_customers     INT,
+    avg_selling_price   DECIMAL(18,2),
+    avg_order_revenue   DECIMAL(18,2),
+    avg_monthly_revenue DECIMAL(18,2)
+);
+GO
+
+
+--------------------------------------------------------------------------------
+-- Create Table: gold.fact_sales   
+--------------------------------------------------------------------------------
+IF OBJECT_ID('gold.fact_sales', 'U') IS NOT NULL
+    DROP TABLE gold.fact_sales;
+GO
+
+CREATE TABLE gold.fact_sales (
+    -- Foreign Keys → Dimensions
+    order_number        NVARCHAR(50),
+    product_key         INT,
+    customer_key        INT,
+
+    -- Dates
+    order_date          DATE,
+    ship_date           DATE,
+    due_date            DATE,
+
+    -- Measures
+    sales_amount        DECIMAL(18,2),
+    quantity            INT,
+    price               DECIMAL(18,2)
+);
+GO
