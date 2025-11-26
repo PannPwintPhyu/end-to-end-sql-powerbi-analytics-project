@@ -84,8 +84,6 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 The Silver Layer applies business cleaning and data standardization:
 
-### **What Happens in Silver**
-
 ✔ Deduplication                                                                                        
 ✔ Data type corrections                                                                                          
 ✔ Date parsing                                                                                                          
@@ -101,8 +99,6 @@ The result: **clean, validated, business-ready staging tables**.
 ## 🥇 **Gold Layer — Analytics / Semantic Zone**
 
 The Gold Layer builds **analytics-ready dimensional models** for BI consumption.
-
-### ⭐ **What Gold Layer Adds**
 
 * Recency
 * Customer lifespan
