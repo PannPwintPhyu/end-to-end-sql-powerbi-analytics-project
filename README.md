@@ -10,8 +10,34 @@
 **[https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D](https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D)**
 
 ---
-🖼️ Dashboard Preview (6 Screenshots)
-<table> <tr> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/1_Overview.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/2_ProductAnalysis.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/3_ProductDetails.png?raw=true" width="300"></td> </tr> <tr> <td align="center"><b>Overview Dashboard</b></td> <td align="center"><b>Product Analysis</b></td> <td align="center"><b>Product Details</b></td> </tr> <tr> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/4_RFMAnalysis.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/5_CustomerRecords.png?raw=true" width="300"></td> <td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/6_Cohort.png?raw=true" width="300"></td> </tr> <tr> <td align="center"><b>RFM Analysis</b></td> <td align="center"><b>Customer Records</b></td> <td align="center"><b>Cohort Analysis</b></td> </tr> </table>
+
+# 🖼️ **Dashboard Preview**
+
+<table>
+<tr>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/1_Overview.png?raw=true" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/2_ProductAnalysis.png?raw=true" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/3_ProductDetails.png?raw=true" width="300"></td>
+</tr>
+
+<tr>
+<td align="center"><b>Overview Dashboard</b></td>
+<td align="center"><b>Product Analysis</b></td>
+<td align="center"><b>Product Details</b></td>
+</tr>
+
+<tr>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/4_RFMAnalysis.png?raw=true" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/5_CustomerRecords.png?raw=true" width="300"></td>
+<td><img src="https://github.com/PannPwintPhyu/end-to-end-sql-powerbi-analytics-project/blob/main/assets/6_Cohort.png?raw=true" width="300"></td>
+</tr>
+
+<tr>
+<td align="center"><b>RFM Analysis</b></td>
+<td align="center"><b>Customer Records</b></td>
+<td align="center"><b>Cohort Analysis</b></td>
+</tr>
+</table>
 
 ---
 
@@ -21,12 +47,12 @@ This project demonstrates a full modern analytics solution starting from raw CSV
 
 It showcases:
 
-✔ Data engineering (ETL) using SQL Server                                                                                                  
-✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)                                                                      
-✔ Dimensional modeling (facts & dimensions)                                                                  
-✔ Data quality corrections and business logic implementation                                                                                    
-✔ Advanced Power BI modeling and DAX                                                                                    
-✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis                                                                
+✔ Data engineering (ETL) using SQL Server
+✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)
+✔ Dimensional modeling (facts & dimensions)
+✔ Data quality corrections and business logic implementation
+✔ Advanced Power BI modeling and DAX
+✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis
 
 ---
 
@@ -60,13 +86,13 @@ The Silver Layer applies business cleaning and data standardization:
 
 ### **What Happens in Silver**
 
-✔ Deduplication                                                                                        
-✔ Data type corrections                                                                                                                                                      
-✔ Date parsing                                                                                                          
-✔ Product-line normalization                                                                                                
-✔ Customer gender/marital standardization                                                                                
-✔ Missing value imputation                                                                                      
-✔ Sales recalculation rules                                                                          
+✔ Deduplication
+✔ Data type corrections
+✔ Date parsing
+✔ Product-line normalization
+✔ Customer gender/marital standardization
+✔ Missing value imputation
+✔ Sales recalculation rules
 
 The result: **clean, validated, business-ready staging tables**.
 
@@ -175,6 +201,64 @@ The final Power BI report contains **4 major analytical modules**:
 * **Performance Optimization (Indexing & Views)**
 
 This project is designed as a professional **BI/Analytics portfolio** showcasing real-world analytical engineering capabilities.
+
+---
+
+# 📌 **Key Insights & Business Recommendations**
+
+### 🔹 **1. Strengthen Early Customer Engagement**
+
+Cohort retention drops sharply after Month 2–3.
+**Recommendation:**
+Introduce onboarding campaigns, reminder notifications, and early-purchase incentives to improve early lifecycle retention.
+
+---
+
+### 🔹 **2. Prioritize High-Value Customer Segments (Champions & Loyal)**
+
+RFM analysis shows these customers generate the majority of revenue.
+**Recommendation:**
+Create premium loyalty benefits, targeted promotions, and exclusive offers to maintain long-term value.
+
+---
+
+### 🔹 **3. Reactivate At-Risk & Hibernating Customers**
+
+These groups represent lost revenue opportunities.
+**Recommendation:**
+Launch reactivation campaigns—discount reminders, personalized product recommendations, and seasonal offers.
+
+---
+
+### 🔹 **4. Optimize Product Portfolio**
+
+Top performer products generate dominant profit while dormant products show declining trends.
+**Recommendation:**
+Increase stock & marketing for high performers; reprice, bundle, or retire underperforming SKUs.
+
+---
+
+### 🔹 **5. Leverage High-Profit Price Segments**
+
+Exclusive/Signature tiers produce the highest profit contribution.
+**Recommendation:**
+Focus upselling strategies to move mid-tier customers into premium product lines.
+
+---
+
+### 🔹 **6. Expand Customer Value Through Upsell/Cross-Sell**
+
+Large number of customers fall under low Monetary score groups.
+**Recommendation:**
+Offer product bundles, personalized recommendations, and frequency-based discounts.
+
+---
+
+### 🔹 **7. Monitor Long-Term Retention Trends**
+
+Cohort patterns show acquisition quality shifts over time.
+**Recommendation:**
+Use Cohort page regularly to evaluate marketing effectiveness and customer loyalty patterns.
 
 ---
 
