@@ -117,7 +117,7 @@ The final Power BI report contains **4 major analytical modules**:
 
 ---
 
-### **1 Overview Dashboard**
+### **1. Overview Dashboard**
 
 * Revenue
 * Profit
@@ -129,7 +129,7 @@ The final Power BI report contains **4 major analytical modules**:
 
 ---
 
-### **2 Product Performance Dashboard**
+### **2. Product Performance Dashboard**
 
 * Product lifecycle (Active / At-Risk / Dormant)
 * Price tier profit distribution
@@ -140,7 +140,7 @@ The final Power BI report contains **4 major analytical modules**:
 
 ---
 
-### **3 RFM Customer Segmentation Dashboard**
+### **3. RFM Customer Segmentation Dashboard**
 
 * Recency scores
 * Frequency scores
@@ -151,7 +151,7 @@ The final Power BI report contains **4 major analytical modules**:
 
 ---
 
-### **4 Cohort Analysis Dashboard**
+### **4. Cohort Analysis Dashboard**
 
 * First purchase cohort grouping
 * Month-over-month retention
