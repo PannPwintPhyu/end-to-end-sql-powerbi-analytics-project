@@ -62,7 +62,7 @@ This project follows the modern **Medallion Architecture** to create a scalable,
 
 ---
 
-## 🥉 **Bronze Layer — Raw Ingestion**
+## 🥉 **Bronze Layer - Raw Ingestion**
 
 The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
@@ -80,7 +80,7 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 ---
 
-## 🥈 **Silver Layer — Clean / Standardized Zone**
+## 🥈 **Silver Layer - Clean / Standardized Zone**
 
 The Silver Layer applies business cleaning and data standardization:
 
@@ -96,7 +96,7 @@ The result: **clean, validated, business-ready staging tables**.
 
 ---
 
-## 🥇 **Gold Layer — Analytics / Semantic Zone**
+## 🥇 **Gold Layer - Analytics / Semantic Zone**
 
 The Gold Layer builds **analytics-ready dimensional models** for BI consumption.
 
