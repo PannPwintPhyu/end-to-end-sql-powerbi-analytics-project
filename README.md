@@ -6,12 +6,12 @@
 
 # 🔗 **Live Power BI Dashboard**
 
-👉 **Click to View Interactive Report**
+ **Click to View Interactive Report**
 **[https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D](https://app.powerbi.com/view?r=eyJrIjoiNGQ4NjY1MTAtZjg2MS00MjA5LWFkMDctMDE4Nzg0MmZiZDdiIiwidCI6IjhlZjRhZjJkLTkwY2YtNGIzMS1hMTI4LTNmYWE5M2EzMmJjOCIsImMiOjEwfQ%3D%3D)**
 
 ---
 
-# 🖼️ **Dashboard Preview**
+#  **Dashboard Preview**
 
 <table>
 <tr>
@@ -41,7 +41,7 @@
 
 ---
 
-# 📘 **Project Overview**
+#  **Project Overview**
 
 This project demonstrates a full modern analytics solution starting from raw CSV files to a production-ready data warehouse and a fully interactive Power BI dashboard for **customer, product, RFM, and cohort analysis**.
 
@@ -56,13 +56,13 @@ It showcases:
 
 ---
 
-# 🏗️ **Data Warehouse Architecture (Bronze → Silver → Gold)**
+#  **Data Warehouse Architecture (Bronze → Silver → Gold)**
 
 This project follows the modern **Medallion Architecture** to create a scalable, analytics-ready warehouse.
 
 ---
 
-## 🥉 **Bronze Layer - Raw Ingestion**
+##  **Bronze Layer - Raw Ingestion**
 
 The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
@@ -80,7 +80,7 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 ---
 
-## 🥈 **Silver Layer - Clean / Standardized Zone**
+##  **Silver Layer - Clean / Standardized Zone**
 
 The Silver Layer applies business cleaning and data standardization:
 
@@ -96,7 +96,7 @@ The result: **clean, validated, business-ready staging tables**.
 
 ---
 
-## 🥇 **Gold Layer - Analytics / Semantic Zone**
+##  **Gold Layer - Analytics / Semantic Zone**
 
 The Gold Layer builds **analytics-ready dimensional models** for BI consumption.
 
@@ -111,7 +111,7 @@ This layer delivers a **fully optimized star schema** for Power BI.
 
 ---
 
-# 📊 **Power BI Dashboards**
+#  **Power BI Dashboards**
 
 The final Power BI report contains **4 major analytical modules**:
 
@@ -162,24 +162,24 @@ The final Power BI report contains **4 major analytical modules**:
 
 # ❓ **Business Questions Answered**
 
-### 🛒 **Customer Behavior**
+###  **Customer Behavior**
 
 * Who are our most valuable customers?
 * Which customers are becoming inactive?
 * What are spending patterns across RFM groups?
 
-### 📦 **Product Insights**
+###  **Product Insights**
 
 * Which products generate the most profit?
 * Which products are declining or dormant?
 * Which categories deliver long-term value?
 
-### 📈 **Performance Trends**
+###  **Performance Trends**
 
 * How are revenue, profit, orders growing over time?
 * What seasons/days show highest activity?
 
-### 🔁 **Retention**
+###  **Retention**
 
 * How long do customers stay active?
 * Which cohorts are strongest or weakest?
