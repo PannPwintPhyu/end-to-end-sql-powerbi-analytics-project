@@ -47,12 +47,12 @@ This project demonstrates a full modern analytics solution starting from raw CSV
 
 It showcases:
 
-✔ Data engineering (ETL) using SQL Server                                                                                      
-✔ Data warehousing using Medallion Architecture (Bronze → Silver → Gold)                                                                          
-✔ Dimensional modeling (facts & dimensions)                                                                                          
-✔ Data quality corrections and business logic implementation                                                                                      
-✔ Advanced Power BI modeling and DAX                                                                                        
-✔ Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis                                                                              
+* Data engineering (ETL) using SQL Server                                                                                      
+* Data warehousing using Medallion Architecture (Bronze → Silver → Gold)                                                                          
+* Dimensional modeling (facts & dimensions)                                                                                          
+* Data quality corrections and business logic implementation                                                                                      
+* Advanced Power BI modeling and DAX                                                                                        
+* Customer analytics, Product analytics, RFM segmentation, Cohort retention analysis                                                                              
 
 ---
 
@@ -202,7 +202,7 @@ This project is designed as a professional **BI/Analytics portfolio** showcasing
 
 # 📌 **Key Insights & Business Recommendations**
 
-### 🔹 **1. Strengthen Early Customer Engagement**
+###  **1. Strengthen Early Customer Engagement**
 
 Cohort retention drops sharply after Month 2–3.                                                                                          
 **Recommendation:**
@@ -210,7 +210,7 @@ Introduce onboarding campaigns, reminder notifications, and early-purchase incen
 
 ---
 
-### 🔹 **2. Prioritize High-Value Customer Segments (Champions & Loyal)**
+###  **2. Prioritize High-Value Customer Segments (Champions & Loyal)**
 
 RFM analysis shows these customers generate the majority of revenue.                                                                                                        
 **Recommendation:**
@@ -218,7 +218,7 @@ Create premium loyalty benefits, targeted promotions, and exclusive offers to ma
 
 ---
 
-### 🔹 **3. Reactivate At-Risk & Hibernating Customers**
+###  **3. Reactivate At-Risk & Hibernating Customers**
 
 These groups represent lost revenue opportunities.
 **Recommendation:**
