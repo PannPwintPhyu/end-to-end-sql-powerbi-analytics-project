@@ -84,13 +84,13 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 The Silver Layer applies business cleaning and data standardization:
 
-✔ Deduplication                                                                                        
-✔ Data type corrections                                                                                          
-✔ Date parsing                                                                                                          
-✔ Product-line normalization                                                                                          
-✔ Customer gender/marital standardization                                                                            
-✔ Missing value imputation                                                                                            
-✔ Sales recalculation rules                                                                                                  
+* Deduplication                                                                                        
+* Data type corrections                                                                                          
+* Date parsing                                                                                                          
+* Product-line normalization                                                                                          
+* Customer gender/marital standardization                                                                            
+* Missing value imputation                                                                                            
+* Sales recalculation rules                                                                                                  
 
 The result: **clean, validated, business-ready staging tables**.
 
@@ -226,7 +226,7 @@ Launch reactivation campaigns—discount reminders, personalized product recomme
 
 ---
 
-### 🔹 **4. Optimize Product Portfolio**
+###  **4. Optimize Product Portfolio**
 
 Top performer products generate dominant profit while dormant products show declining trends.                                                          
 **Recommendation:**
@@ -234,7 +234,7 @@ Increase stock & marketing for high performers; reprice, bundle, or retire under
 
 ---
 
-### 🔹 **5. Leverage High-Profit Price Segments**
+###  **5. Leverage High-Profit Price Segments**
 
 Exclusive/Signature tiers produce the highest profit contribution.                                                                    
 **Recommendation:**
@@ -242,7 +242,7 @@ Focus upselling strategies to move mid-tier customers into premium product lines
 
 ---
 
-### 🔹 **6. Expand Customer Value Through Upsell/Cross-Sell**
+###  **6. Expand Customer Value Through Upsell/Cross-Sell**
 
 Large number of customers fall under low Monetary score groups.                                                      
 **Recommendation:**
@@ -250,7 +250,7 @@ Offer product bundles, personalized recommendations, and frequency-based discoun
 
 ---
 
-### 🔹 **7. Monitor Long-Term Retention Trends**
+###  **7. Monitor Long-Term Retention Trends**
 
 Cohort patterns show acquisition quality shifts over time.                                                                        
 **Recommendation:**
