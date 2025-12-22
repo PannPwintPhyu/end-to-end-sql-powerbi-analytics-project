@@ -79,7 +79,7 @@ The Bronze layer stores raw CRM, ERP, and sales files exactly as received.
 
 ---
 
-##  **Silver Layer - Clean / Standardized Zone**
+##  **Silver Layer - Clean / Standardized **
 
 The Silver Layer applies business cleaning and data standardization:
 
@@ -95,7 +95,7 @@ The result: **clean, validated, business-ready staging tables**.
 
 ---
 
-##  **Gold Layer - Analytics / Semantic Zone**
+##  **Gold Layer - Analytics **
 
 The Gold Layer builds **analytics-ready dimensional models** for BI consumption.
 
