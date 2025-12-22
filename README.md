@@ -1,6 +1,6 @@
 # 🚀 **End-to-End SQL + Power BI Analytics Project**
 
-**ETL | Medallion Architecture | SQL Server | Power BI | DAX**
+**Medallion Architecture | SQL| Power BI | DAX**
 
 ---
 
@@ -46,8 +46,7 @@
 This project demonstrates a full modern analytics solution starting from raw CSV files to a production-ready data warehouse and a fully interactive Power BI dashboard for **customer, product, RFM, and cohort analysis**.
 
 It showcases:
-
-* Data engineering (ETL) using SQL Server                                                                                      
+                                                                                 
 * Data warehousing using Medallion Architecture (Bronze → Silver → Gold)                                                                          
 * Dimensional modeling (facts & dimensions)                                                                                          
 * Data quality corrections and business logic implementation                                                                                      
